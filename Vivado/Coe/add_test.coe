@@ -1,0 +1,72 @@
+; This .COE file specifies the initial contents for a block memory (BRAM)
+; for testing RV32I CPU ADD instruction.
+; Memory depth: 32 words (128 bytes)
+; Memory width: 32 bits
+; -----------------------------------------------------------------
+; 0x00000000: li x1, 5      -> addi x1, x0, 5
+; 0x00000004: li x2, 3      -> addi x2, x0, 3  
+; 0x00000008: add x3, x1, x2 -> x3 should be 8
+; 0x0000000C: li x4, 8      -> addi x4, x0, 8 (expected value)
+; 0x00000010: bne x3, x4, 8 -> branch to fail if x3 != x4
+; 0x00000014: li x5, 1      -> addi x5, x0, 1 (pass code)
+; 0x00000018: lui x6, 0x80000 -> x6 = 0x80000000 (tohost address)
+; 0x0000001C: sw x5, 0(x6)   -> store 1 to tohost
+; 0x00000020: ebreak         -> stop execution
+; 0x00000024: li x5, 2      -> addi x5, x0, 2 (fail code)
+; 0x00000028: lui x6, 0x80000 -> x6 = 0x80000000
+; 0x0000002C: sw x5, 0(x6)   -> store 2 to tohost
+; 0x00000030: ebreak         -> stop execution
+; 0x00000034: nop (padding)
+; 0x00000038: nop (padding)
+; 0x0000003C: nop (padding)
+; 0x00000040: nop (padding)
+; 0x00000044: nop (padding)
+; 0x00000048: nop (padding)
+; 0x0000004C: nop (padding)
+; 0x00000050: nop (padding)
+; 0x00000054: nop (padding)
+; 0x00000058: nop (padding)
+; 0x0000005C: nop (padding)
+; 0x00000060: nop (padding)
+; 0x00000064: nop (padding)
+; 0x00000068: nop (padding)
+; 0x0000006C: nop (padding)
+; 0x00000070: nop (padding)
+; 0x00000074: nop (padding)
+; 0x00000078: nop (padding)
+; 0x0000007C: nop (padding);
+; -----------------------------------------------------------------
+memory_initialization_radix=16;
+memory_initialization_vector=
+00500093,
+00300113,
+002081b3,
+00800213,
+00419463,
+00100293,
+80000337,
+00532023,
+00100073,
+00200293,
+80000337,
+00532023,
+00100073,
+00000000,
+00000000,
+00000000,
+00000000,
+00000000,
+00000000,
+00000000,
+00000000,
+00000000,
+00000000,
+00000000,
+00000000,
+00000000,
+00000000,
+00000000,
+00000000,
+00000000,
+00000000,
+00000000;

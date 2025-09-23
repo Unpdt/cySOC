@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_cySOC_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_cySOC" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="908.666 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,018.267 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="336"></NameColumnWidth>
+      <ValueColumnWidth column_width="147"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="30" />
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/id_load" type="logic">
+      <obj_property name="ElementShortName">id_load</obj_property>
+      <obj_property name="ObjectShortName">id_load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/alu_out" type="array">
+      <obj_property name="ElementShortName">alu_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ex_pc" type="array">
+      <obj_property name="ElementShortName">ex_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ex_load" type="logic">
+      <obj_property name="ElementShortName">ex_load</obj_property>
+      <obj_property name="ObjectShortName">ex_load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ex_store" type="logic">
+      <obj_property name="ElementShortName">ex_store</obj_property>
+      <obj_property name="ObjectShortName">ex_store</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ex_mem_to_reg" type="logic">
+      <obj_property name="ElementShortName">ex_mem_to_reg</obj_property>
+      <obj_property name="ObjectShortName">ex_mem_to_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ex_gpr_we_" type="logic">
+      <obj_property name="ElementShortName">ex_gpr_we_</obj_property>
+      <obj_property name="ObjectShortName">ex_gpr_we_</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ex_dst_addr" type="array">
+      <obj_property name="ElementShortName">ex_dst_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_dst_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ex_alu_res" type="array">
+      <obj_property name="ElementShortName">ex_alu_res[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_alu_res[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ex_mem_wr_data" type="array">
+      <obj_property name="ElementShortName">ex_mem_wr_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_mem_wr_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/bus_addr" type="array">
+      <obj_property name="ElementShortName">bus_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bus_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/bus_rw" type="logic">
+      <obj_property name="ElementShortName">bus_rw</obj_property>
+      <obj_property name="ObjectShortName">bus_rw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/bus_en" type="logic">
+      <obj_property name="ElementShortName">bus_en</obj_property>
+      <obj_property name="ObjectShortName">bus_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/bus_rd_data" type="array">
+      <obj_property name="ElementShortName">bus_rd_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bus_rd_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/bus_wr_data" type="array">
+      <obj_property name="ElementShortName">bus_wr_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bus_wr_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/mem_out" type="array">
+      <obj_property name="ElementShortName">mem_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/mem_pc" type="array">
+      <obj_property name="ElementShortName">mem_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/mem_mem_out" type="array">
+      <obj_property name="ElementShortName">mem_mem_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_mem_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/mem_to_reg" type="logic">
+      <obj_property name="ElementShortName">mem_to_reg</obj_property>
+      <obj_property name="ObjectShortName">mem_to_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/mem_gpr_we_" type="logic">
+      <obj_property name="ElementShortName">mem_gpr_we_</obj_property>
+      <obj_property name="ObjectShortName">mem_gpr_we_</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/mem_dst_addr" type="array">
+      <obj_property name="ElementShortName">mem_dst_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_dst_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/mem_alu_res" type="array">
+      <obj_property name="ElementShortName">mem_alu_res[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_alu_res[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ctrl_addr" type="array">
+      <obj_property name="ElementShortName">ctrl_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ctrl_wr_data" type="array">
+      <obj_property name="ElementShortName">ctrl_wr_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_wr_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ctrl_rw" type="logic">
+      <obj_property name="ElementShortName">ctrl_rw</obj_property>
+      <obj_property name="ObjectShortName">ctrl_rw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ctrl_en" type="logic">
+      <obj_property name="ElementShortName">ctrl_en</obj_property>
+      <obj_property name="ObjectShortName">ctrl_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ctrl_rd_data" type="array">
+      <obj_property name="ElementShortName">ctrl_rd_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_rd_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ctrl_mem_out" type="array">
+      <obj_property name="ElementShortName">ctrl_mem_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_mem_out[31:0]</obj_property>
+   </wvobject>
+</wave_config>

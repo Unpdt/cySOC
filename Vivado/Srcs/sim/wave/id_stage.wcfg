@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_cySOC_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_cySOC" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="142.717 ns"></ZoomStartTime>
+      <ZoomEndTime time="216.418 ns"></ZoomEndTime>
+      <Cursor1Time time="159.517 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="156"></NameColumnWidth>
+      <ValueColumnWidth column_width="138"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="107" />
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/rs1_addr" type="array">
+      <obj_property name="ElementShortName">rs1_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rs1_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/rs2_addr" type="array">
+      <obj_property name="ElementShortName">rs2_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/rs1_data" type="array">
+      <obj_property name="ElementShortName">rs1_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs1_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/rs2_data" type="array">
+      <obj_property name="ElementShortName">rs2_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/alu_out" type="array">
+      <obj_property name="ElementShortName">alu_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/ex_dst_addr" type="array">
+      <obj_property name="ElementShortName">ex_dst_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_dst_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/ex_gpr_we_" type="logic">
+      <obj_property name="ElementShortName">ex_gpr_we_</obj_property>
+      <obj_property name="ObjectShortName">ex_gpr_we_</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/ex_load" type="logic">
+      <obj_property name="ElementShortName">ex_load</obj_property>
+      <obj_property name="ObjectShortName">ex_load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/ex_alu_res" type="array">
+      <obj_property name="ElementShortName">ex_alu_res[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_alu_res[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/mem_out" type="array">
+      <obj_property name="ElementShortName">mem_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/gpr_w_data" type="array">
+      <obj_property name="ElementShortName">gpr_w_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gpr_w_data[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/gpr_w_addr" type="array">
+      <obj_property name="ElementShortName">gpr_w_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">gpr_w_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/gpr_we_" type="logic">
+      <obj_property name="ElementShortName">gpr_we_</obj_property>
+      <obj_property name="ObjectShortName">gpr_we_</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/if_pc" type="array">
+      <obj_property name="ElementShortName">if_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">if_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/if_insn" type="array">
+      <obj_property name="ElementShortName">if_insn[31:0]</obj_property>
+      <obj_property name="ObjectShortName">if_insn[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/id_pc" type="array">
+      <obj_property name="ElementShortName">id_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">id_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/id_branch" type="logic">
+      <obj_property name="ElementShortName">id_branch</obj_property>
+      <obj_property name="ObjectShortName">id_branch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/id_jump" type="logic">
+      <obj_property name="ElementShortName">id_jump</obj_property>
+      <obj_property name="ObjectShortName">id_jump</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/id_load" type="logic">
+      <obj_property name="ElementShortName">id_load</obj_property>
+      <obj_property name="ObjectShortName">id_load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/id_store" type="logic">
+      <obj_property name="ElementShortName">id_store</obj_property>
+      <obj_property name="ObjectShortName">id_store</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/id_gpr_we_" type="logic">
+      <obj_property name="ElementShortName">id_gpr_we_</obj_property>
+      <obj_property name="ObjectShortName">id_gpr_we_</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/id_dst_addr" type="array">
+      <obj_property name="ElementShortName">id_dst_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">id_dst_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/id_alu_src" type="logic">
+      <obj_property name="ElementShortName">id_alu_src</obj_property>
+      <obj_property name="ObjectShortName">id_alu_src</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/id_alu_op" type="array">
+      <obj_property name="ElementShortName">id_alu_op[4:0]</obj_property>
+      <obj_property name="ObjectShortName">id_alu_op[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/id_imm_ext" type="array">
+      <obj_property name="ElementShortName">id_imm_ext[31:0]</obj_property>
+      <obj_property name="ObjectShortName">id_imm_ext[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/id_rs1_data" type="array">
+      <obj_property name="ElementShortName">id_rs1_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">id_rs1_data[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/id_rs2_data" type="array">
+      <obj_property name="ElementShortName">id_rs2_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">id_rs2_data[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/opcode" type="array">
+      <obj_property name="ElementShortName">opcode[6:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/rd" type="array">
+      <obj_property name="ElementShortName">rd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rd[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/funct3" type="array">
+      <obj_property name="ElementShortName">funct3[2:0]</obj_property>
+      <obj_property name="ObjectShortName">funct3[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/rs1" type="array">
+      <obj_property name="ElementShortName">rs1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rs1[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/rs2" type="array">
+      <obj_property name="ElementShortName">rs2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/funct7" type="array">
+      <obj_property name="ElementShortName">funct7[6:0]</obj_property>
+      <obj_property name="ObjectShortName">funct7[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/imm_i" type="array">
+      <obj_property name="ElementShortName">imm_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">imm_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/imm_s" type="array">
+      <obj_property name="ElementShortName">imm_s[31:0]</obj_property>
+      <obj_property name="ObjectShortName">imm_s[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/imm_b" type="array">
+      <obj_property name="ElementShortName">imm_b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">imm_b[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/imm_u" type="array">
+      <obj_property name="ElementShortName">imm_u[31:0]</obj_property>
+      <obj_property name="ObjectShortName">imm_u[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/imm_j" type="array">
+      <obj_property name="ElementShortName">imm_j[31:0]</obj_property>
+      <obj_property name="ObjectShortName">imm_j[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_r_type" type="logic">
+      <obj_property name="ElementShortName">is_r_type</obj_property>
+      <obj_property name="ObjectShortName">is_r_type</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_i_type" type="logic">
+      <obj_property name="ElementShortName">is_i_type</obj_property>
+      <obj_property name="ObjectShortName">is_i_type</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_i_load" type="logic">
+      <obj_property name="ElementShortName">is_i_load</obj_property>
+      <obj_property name="ObjectShortName">is_i_load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_s_type" type="logic">
+      <obj_property name="ElementShortName">is_s_type</obj_property>
+      <obj_property name="ObjectShortName">is_s_type</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_b_type" type="logic">
+      <obj_property name="ElementShortName">is_b_type</obj_property>
+      <obj_property name="ObjectShortName">is_b_type</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_u_type" type="logic">
+      <obj_property name="ElementShortName">is_u_type</obj_property>
+      <obj_property name="ObjectShortName">is_u_type</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_u_auipc" type="logic">
+      <obj_property name="ElementShortName">is_u_auipc</obj_property>
+      <obj_property name="ObjectShortName">is_u_auipc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_j_type" type="logic">
+      <obj_property name="ElementShortName">is_j_type</obj_property>
+      <obj_property name="ObjectShortName">is_j_type</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_j_jalr" type="logic">
+      <obj_property name="ElementShortName">is_j_jalr</obj_property>
+      <obj_property name="ObjectShortName">is_j_jalr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_system" type="logic">
+      <obj_property name="ElementShortName">is_system</obj_property>
+      <obj_property name="ObjectShortName">is_system</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_add" type="logic">
+      <obj_property name="ElementShortName">is_add</obj_property>
+      <obj_property name="ObjectShortName">is_add</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_addi" type="logic">
+      <obj_property name="ElementShortName">is_addi</obj_property>
+      <obj_property name="ObjectShortName">is_addi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_sub" type="logic">
+      <obj_property name="ElementShortName">is_sub</obj_property>
+      <obj_property name="ObjectShortName">is_sub</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_lui" type="logic">
+      <obj_property name="ElementShortName">is_lui</obj_property>
+      <obj_property name="ObjectShortName">is_lui</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_auipc" type="logic">
+      <obj_property name="ElementShortName">is_auipc</obj_property>
+      <obj_property name="ObjectShortName">is_auipc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_and" type="logic">
+      <obj_property name="ElementShortName">is_and</obj_property>
+      <obj_property name="ObjectShortName">is_and</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_andi" type="logic">
+      <obj_property name="ElementShortName">is_andi</obj_property>
+      <obj_property name="ObjectShortName">is_andi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_or" type="logic">
+      <obj_property name="ElementShortName">is_or</obj_property>
+      <obj_property name="ObjectShortName">is_or</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_ori" type="logic">
+      <obj_property name="ElementShortName">is_ori</obj_property>
+      <obj_property name="ObjectShortName">is_ori</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_xor" type="logic">
+      <obj_property name="ElementShortName">is_xor</obj_property>
+      <obj_property name="ObjectShortName">is_xor</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_xori" type="logic">
+      <obj_property name="ElementShortName">is_xori</obj_property>
+      <obj_property name="ObjectShortName">is_xori</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_sll" type="logic">
+      <obj_property name="ElementShortName">is_sll</obj_property>
+      <obj_property name="ObjectShortName">is_sll</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_slli" type="logic">
+      <obj_property name="ElementShortName">is_slli</obj_property>
+      <obj_property name="ObjectShortName">is_slli</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_srl" type="logic">
+      <obj_property name="ElementShortName">is_srl</obj_property>
+      <obj_property name="ObjectShortName">is_srl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_srli" type="logic">
+      <obj_property name="ElementShortName">is_srli</obj_property>
+      <obj_property name="ObjectShortName">is_srli</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_sra" type="logic">
+      <obj_property name="ElementShortName">is_sra</obj_property>
+      <obj_property name="ObjectShortName">is_sra</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_srai" type="logic">
+      <obj_property name="ElementShortName">is_srai</obj_property>
+      <obj_property name="ObjectShortName">is_srai</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_slt" type="logic">
+      <obj_property name="ElementShortName">is_slt</obj_property>
+      <obj_property name="ObjectShortName">is_slt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_slti" type="logic">
+      <obj_property name="ElementShortName">is_slti</obj_property>
+      <obj_property name="ObjectShortName">is_slti</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_sltu" type="logic">
+      <obj_property name="ElementShortName">is_sltu</obj_property>
+      <obj_property name="ObjectShortName">is_sltu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_sltiu" type="logic">
+      <obj_property name="ElementShortName">is_sltiu</obj_property>
+      <obj_property name="ObjectShortName">is_sltiu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_beq" type="logic">
+      <obj_property name="ElementShortName">is_beq</obj_property>
+      <obj_property name="ObjectShortName">is_beq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_bne" type="logic">
+      <obj_property name="ElementShortName">is_bne</obj_property>
+      <obj_property name="ObjectShortName">is_bne</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_blt" type="logic">
+      <obj_property name="ElementShortName">is_blt</obj_property>
+      <obj_property name="ObjectShortName">is_blt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_bge" type="logic">
+      <obj_property name="ElementShortName">is_bge</obj_property>
+      <obj_property name="ObjectShortName">is_bge</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_bltu" type="logic">
+      <obj_property name="ElementShortName">is_bltu</obj_property>
+      <obj_property name="ObjectShortName">is_bltu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_bgeu" type="logic">
+      <obj_property name="ElementShortName">is_bgeu</obj_property>
+      <obj_property name="ObjectShortName">is_bgeu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_jal" type="logic">
+      <obj_property name="ElementShortName">is_jal</obj_property>
+      <obj_property name="ObjectShortName">is_jal</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_jalr" type="logic">
+      <obj_property name="ElementShortName">is_jalr</obj_property>
+      <obj_property name="ObjectShortName">is_jalr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_lb" type="logic">
+      <obj_property name="ElementShortName">is_lb</obj_property>
+      <obj_property name="ObjectShortName">is_lb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_lh" type="logic">
+      <obj_property name="ElementShortName">is_lh</obj_property>
+      <obj_property name="ObjectShortName">is_lh</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_lw" type="logic">
+      <obj_property name="ElementShortName">is_lw</obj_property>
+      <obj_property name="ObjectShortName">is_lw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_lbu" type="logic">
+      <obj_property name="ElementShortName">is_lbu</obj_property>
+      <obj_property name="ObjectShortName">is_lbu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_lhu" type="logic">
+      <obj_property name="ElementShortName">is_lhu</obj_property>
+      <obj_property name="ObjectShortName">is_lhu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_sb" type="logic">
+      <obj_property name="ElementShortName">is_sb</obj_property>
+      <obj_property name="ObjectShortName">is_sb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_sh" type="logic">
+      <obj_property name="ElementShortName">is_sh</obj_property>
+      <obj_property name="ObjectShortName">is_sh</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_sw" type="logic">
+      <obj_property name="ElementShortName">is_sw</obj_property>
+      <obj_property name="ObjectShortName">is_sw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_fence" type="logic">
+      <obj_property name="ElementShortName">is_fence</obj_property>
+      <obj_property name="ObjectShortName">is_fence</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_fencei" type="logic">
+      <obj_property name="ElementShortName">is_fencei</obj_property>
+      <obj_property name="ObjectShortName">is_fencei</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_ecall" type="logic">
+      <obj_property name="ElementShortName">is_ecall</obj_property>
+      <obj_property name="ObjectShortName">is_ecall</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_ebreak" type="logic">
+      <obj_property name="ElementShortName">is_ebreak</obj_property>
+      <obj_property name="ObjectShortName">is_ebreak</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_csrrw" type="logic">
+      <obj_property name="ElementShortName">is_csrrw</obj_property>
+      <obj_property name="ObjectShortName">is_csrrw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_csrrs" type="logic">
+      <obj_property name="ElementShortName">is_csrrs</obj_property>
+      <obj_property name="ObjectShortName">is_csrrs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_csrrc" type="logic">
+      <obj_property name="ElementShortName">is_csrrc</obj_property>
+      <obj_property name="ObjectShortName">is_csrrc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_csrrwi" type="logic">
+      <obj_property name="ElementShortName">is_csrrwi</obj_property>
+      <obj_property name="ObjectShortName">is_csrrwi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_csrrsi" type="logic">
+      <obj_property name="ElementShortName">is_csrrsi</obj_property>
+      <obj_property name="ObjectShortName">is_csrrsi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_csrrci" type="logic">
+      <obj_property name="ElementShortName">is_csrrci</obj_property>
+      <obj_property name="ObjectShortName">is_csrrci</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/uses_rs1" type="logic">
+      <obj_property name="ElementShortName">uses_rs1</obj_property>
+      <obj_property name="ObjectShortName">uses_rs1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/uses_rs2" type="logic">
+      <obj_property name="ElementShortName">uses_rs2</obj_property>
+      <obj_property name="ObjectShortName">uses_rs2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/writes_rd" type="logic">
+      <obj_property name="ElementShortName">writes_rd</obj_property>
+      <obj_property name="ObjectShortName">writes_rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_branch" type="logic">
+      <obj_property name="ElementShortName">is_branch</obj_property>
+      <obj_property name="ObjectShortName">is_branch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_jump" type="logic">
+      <obj_property name="ElementShortName">is_jump</obj_property>
+      <obj_property name="ObjectShortName">is_jump</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_load" type="logic">
+      <obj_property name="ElementShortName">is_load</obj_property>
+      <obj_property name="ObjectShortName">is_load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_store" type="logic">
+      <obj_property name="ElementShortName">is_store</obj_property>
+      <obj_property name="ObjectShortName">is_store</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_alu_op" type="logic">
+      <obj_property name="ElementShortName">is_alu_op</obj_property>
+      <obj_property name="ObjectShortName">is_alu_op</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_csr_op" type="logic">
+      <obj_property name="ElementShortName">is_csr_op</obj_property>
+      <obj_property name="ObjectShortName">is_csr_op</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_id_top/is_system_op" type="logic">
+      <obj_property name="ElementShortName">is_system_op</obj_property>
+      <obj_property name="ObjectShortName">is_system_op</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_cySOC_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_cySOC" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="108.450 ns"></ZoomStartTime>
+      <ZoomEndTime time="207.751 ns"></ZoomEndTime>
+      <Cursor1Time time="125.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="336"></NameColumnWidth>
+      <ValueColumnWidth column_width="146"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_if_top/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_if_top/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_if_top/flush" type="logic">
+      <obj_property name="ElementShortName">flush</obj_property>
+      <obj_property name="ObjectShortName">flush</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_if_top/branch" type="logic">
+      <obj_property name="ElementShortName">branch</obj_property>
+      <obj_property name="ObjectShortName">branch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_if_top/jump_valid" type="logic">
+      <obj_property name="ElementShortName">jump_valid</obj_property>
+      <obj_property name="ObjectShortName">jump_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_if_top/new_pc" type="array">
+      <obj_property name="ElementShortName">new_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">new_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_if_top/addr" type="array">
+      <obj_property name="ElementShortName">addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_if_top/rw" type="logic">
+      <obj_property name="ElementShortName">rw</obj_property>
+      <obj_property name="ObjectShortName">rw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_if_top/rd_data" type="array">
+      <obj_property name="ElementShortName">rd_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_if_top/PC" type="array">
+      <obj_property name="ElementShortName">PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_if_top/insn" type="array">
+      <obj_property name="ElementShortName">insn[31:0]</obj_property>
+      <obj_property name="ObjectShortName">insn[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_if_top/if_pc" type="array">
+      <obj_property name="ElementShortName">if_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">if_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_if_top/if_insn" type="array">
+      <obj_property name="ElementShortName">if_insn[31:0]</obj_property>
+      <obj_property name="ObjectShortName">if_insn[31:0]</obj_property>
+   </wvobject>
+</wave_config>
