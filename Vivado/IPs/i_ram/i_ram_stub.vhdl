@@ -1,10 +1,9 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
--- Date        : Mon Sep 22 14:20:07 2025
+-- Date        : Tue Sep 23 10:21:37 2025
 -- Host        : DESKTOP-U1I23HU running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top i_ram -prefix
---               i_ram_ i_ram_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub h:/ProjectFiles/cySOC/Vivado/IPs/i_ram/i_ram_stub.vhdl
 -- Design      : i_ram
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-2

@@ -211,7 +211,7 @@ module id_reg(
     always @(posedge clk or `RESET_EDGE rst) begin
         if (rst == `RESET_ENABLE) begin 
             id_alu_src <= `ALU_SRC_IMM;
-        end else if (is_r_type || is_b_type || is_s_type) begin 
+        end else if (is_r_type || is_b_type) begin 
             id_alu_src <= `ALU_SRC_REG;
         end else begin 
             id_alu_src <= `ALU_SRC_IMM;

@@ -95,7 +95,7 @@ module ex_top(
         .alu_out        (alu_out),
         
         // data2
-        .data2          (data2),
+        // .data2          (data2),
         
         // 流水线寄存器输出
         .ex_pc          (ex_pc),

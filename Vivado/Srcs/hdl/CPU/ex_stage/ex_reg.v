@@ -23,7 +23,7 @@ module ex_reg(
     input  wire [`WordDataBus]      alu_out,
 
     //
-    input  wire [`WordDataBus]      data2,
+    // input  wire [`WordDataBus]      data2,
 
     // 流水线寄存器输出
     output reg  [`WordDataBus]      ex_pc,

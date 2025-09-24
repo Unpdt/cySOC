@@ -1,0 +1,49 @@
+; This .COE file specifies the initial contents for a block memory (BRAM)
+; Generated from RISC-V test cases extracted from dump file
+; Memory depth: 37 words (actual instructions)
+; Memory width: 32 bits
+; -----------------------------------------------------------------
+; Test cases included:
+;   test_2: 8 instructions
+;   test_3: 9 instructions
+; Extra instructions: 20 instructions
+; -----------------------------------------------------------------
+memory_initialization_radix=16;
+memory_initialization_vector=
+00200193,
+00002517,
+71c50513,
+004005ef,
+40b50533,
+000023b7,
+71038393,
+02751463,
+00300193,
+ffffe517,
+8fc50513,
+004005ef,
+40b50533,
+ffffe3b7,
+8f038393,
+00751463,
+02301063,
+00200293,
+80000337,
+00532023,
+00100073,
+00000013,
+00000013,
+00000013,
+00100293,
+80000337,
+00532023,
+00100073,
+00000013,
+00000013,
+00000013,
+00000013,
+00000013,
+00000013,
+00000013,
+00000013,
+00000013;

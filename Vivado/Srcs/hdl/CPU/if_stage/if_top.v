@@ -41,7 +41,7 @@ module if_top(
         .clk        (clk),
         .rst        (rst),
         .flush      (flush),
-        .jump     (jump),
+        .jump       (jump),
         .branch_valid (branch_valid),
         .new_pc     (new_pc),
         .PC         (PC),
