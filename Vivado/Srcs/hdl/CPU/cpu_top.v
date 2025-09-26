@@ -63,6 +63,7 @@ module cpu_top(
     
     // 控制信号
     wire                flush;
+    wire                stall;
     wire                jump;
     wire                branch_valid;
     wire [`WordDataBus] new_pc;
@@ -81,6 +82,7 @@ module cpu_top(
         .clk        (clk),
         .rst        (rst),
         .flush      (flush),
+        .stall      (stall),
         .jump       (jump),
         .branch_valid (branch_valid),
         .new_pc     (new_pc),
@@ -96,6 +98,7 @@ module cpu_top(
         .clk           (clk),
         .rst           (rst),
         .flush         (flush),
+        .stall         (stall),
         .if_pc         (if_pc),
         .if_insn       (if_insn),
         .rs1_addr      (rs1_addr),

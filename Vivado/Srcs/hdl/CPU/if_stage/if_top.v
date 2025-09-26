@@ -7,6 +7,7 @@ module if_top(
 
     // 控制信号
     input  wire                 flush,
+    input  wire                 stall,
 
     // 跳转信号
     input  wire                 jump,
@@ -41,6 +42,7 @@ module if_top(
         .clk        (clk),
         .rst        (rst),
         .flush      (flush),
+        .stall      (stall),
         .jump       (jump),
         .branch_valid (branch_valid),
         .new_pc     (new_pc),

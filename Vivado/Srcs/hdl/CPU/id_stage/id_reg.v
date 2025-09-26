@@ -6,6 +6,7 @@ module id_reg(
 
     // 外部控制信号
     input  wire                     flush,
+    output reg                      stall,
 
     // 直通输入
     input  wire [`WordDataBus]      alu_out,
@@ -144,9 +145,18 @@ module id_reg(
                        is_lui || is_auipc ||
                        is_jal || is_jalr;
 
+    // stall
+    always @(*) begin
+        stall = `DISABLE;
+        if ((rs1 == id_dst_addr || rs2 == id_dst_addr) && 
+            id_gpr_we_ == `ENABLE_ && id_load == `ENABLE) begin
+            stall = `ENABLE;
+        end
+    end
+
     // id_pc
     always @(posedge clk or `RESET_EDGE rst) begin
-        if (rst == `RESET_ENABLE) begin 
+        if (rst == `RESET_ENABLE || stall == `ENABLE) begin 
             id_pc <= {`WORD_ADDR_W{1'b0}};
         end else if (flush == `ENABLE) begin 
             id_pc <= {`WORD_ADDR_W{1'b0}};
@@ -157,7 +167,7 @@ module id_reg(
 
     // id_branch
     always @(posedge clk or `RESET_EDGE rst) begin
-        if (rst == `RESET_ENABLE) begin 
+        if (rst == `RESET_ENABLE || stall == `ENABLE) begin 
             id_branch <= `DISABLE;
         end else if (flush == `ENABLE) begin 
             id_branch <= `DISABLE;
@@ -170,7 +180,7 @@ module id_reg(
 
     // id_jump
     always @(posedge clk or `RESET_EDGE rst) begin
-        if (rst == `RESET_ENABLE) begin 
+        if (rst == `RESET_ENABLE || stall == `ENABLE) begin 
             id_jump <= `DISABLE;
         end else if (flush == `ENABLE) begin 
             id_jump <= `DISABLE;
@@ -183,7 +193,7 @@ module id_reg(
 
     // id_load
     always @(posedge clk or `RESET_EDGE rst) begin
-        if (rst == `RESET_ENABLE) begin 
+        if (rst == `RESET_ENABLE || stall == `ENABLE) begin 
             id_load <= `DISABLE;
         end else if (flush == `ENABLE) begin 
             id_load <= `DISABLE;
@@ -196,7 +206,7 @@ module id_reg(
 
     // id_store
     always @(posedge clk or `RESET_EDGE rst) begin
-        if (rst == `RESET_ENABLE) begin 
+        if (rst == `RESET_ENABLE || stall == `ENABLE) begin 
             id_store <= `DISABLE;
         end else if (flush == `ENABLE) begin 
             id_store <= `DISABLE;
@@ -209,7 +219,7 @@ module id_reg(
 
     // id_ls_type
     always @(posedge clk or `RESET_EDGE rst) begin
-        if (rst == `RESET_ENABLE) begin 
+        if (rst == `RESET_ENABLE || stall == `ENABLE) begin 
             id_ls_type <= `LS_TYPE_NONE;
         end else if (is_lb || is_sb) begin
             id_ls_type <= `LS_TYPE_BYTE;
@@ -220,7 +230,7 @@ module id_reg(
         end else if (is_lbu) begin
             id_ls_type <= `LS_TYPE_UBYTE;
         end else if (is_lhu) begin
-            id_ls_type <= `LS_TYPE_HALF;
+            id_ls_type <= `LS_TYPE_UHALF;
         end else begin 
             id_ls_type <= `LS_TYPE_NONE;
         end
@@ -228,7 +238,7 @@ module id_reg(
 
     // id_gpr_we_ && id_dst_addr
     always @(posedge clk or `RESET_EDGE rst) begin
-        if (rst == `RESET_ENABLE) begin 
+        if (rst == `RESET_ENABLE || stall == `ENABLE) begin 
             id_gpr_we_ <= `DISABLE_;
             id_dst_addr <= `REG_IDX_W'd0;
         end else if (is_gpr_we) begin 
@@ -242,7 +252,7 @@ module id_reg(
 
     // id_alu_src
     always @(posedge clk or `RESET_EDGE rst) begin
-        if (rst == `RESET_ENABLE) begin 
+        if (rst == `RESET_ENABLE || stall == `ENABLE) begin 
             id_alu_src <= `ALU_SRC_IMM;
         end else if (flush == `ENABLE) begin 
             id_alu_src <= `ALU_SRC_IMM;
@@ -255,7 +265,7 @@ module id_reg(
 
     // id_alu_op
     always @(posedge clk or `RESET_EDGE rst) begin
-        if (rst == `RESET_ENABLE) begin 
+        if (rst == `RESET_ENABLE || stall == `ENABLE) begin 
             id_alu_op <= `ALU_NOP;
         end else if (flush == `ENABLE) begin 
             id_alu_op <= `ALU_NOP;
@@ -300,7 +310,7 @@ module id_reg(
 
     // id_imm_ext
     always @(posedge clk or `RESET_EDGE rst) begin
-        if (rst == `RESET_ENABLE) begin 
+        if (rst == `RESET_ENABLE || stall == `ENABLE) begin 
             id_imm_ext <= `WORD_DATA_W'd0;
         end else if (flush == `ENABLE) begin 
             id_imm_ext <= `WORD_DATA_W'd0;
@@ -321,7 +331,7 @@ module id_reg(
 
     // id_rs1_data && id_rs2_data
     always @(posedge clk or `RESET_EDGE rst) begin
-        if (rst == `RESET_ENABLE) begin 
+        if (rst == `RESET_ENABLE || stall == `ENABLE) begin 
             id_rs1_data <= `WORD_DATA_W'd0;
             id_rs2_data <= `WORD_DATA_W'd0;
         end else if (flush == `ENABLE) begin 

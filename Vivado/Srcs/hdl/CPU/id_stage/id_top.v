@@ -10,6 +10,7 @@ module id_top (
 
     // 控制信号
     input  wire                     flush,
+    output wire                     stall,
 
     // gpr 接口
     output wire [`REG_IDX_W-1:0]    rs1_addr,
@@ -236,6 +237,7 @@ module id_top (
 
         // 外部控制信号
         .flush           (flush),
+        .stall           (stall),
 
         // 直通输入
         .alu_out         (alu_out),
