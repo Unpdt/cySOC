@@ -28,6 +28,7 @@ module cpu_top(
     wire                id_jump;
     wire                id_load;
     wire                id_store;
+    wire [`LsTypeBus]   id_ls_type;
     wire                id_gpr_we_;
     wire [`REG_IDX_W-1:0] id_dst_addr;
     wire                id_alu_src;
@@ -42,6 +43,7 @@ module cpu_top(
     wire                ex_jump;
     wire                ex_load;
     wire                ex_store;
+    wire [`LsTypeBus]   ex_ls_type;
     wire                ex_gpr_we_;
     wire [`REG_IDX_W-1:0] ex_dst_addr;
     wire [`WordDataBus] alu_out;
@@ -93,6 +95,7 @@ module cpu_top(
     id_top inst_id_top (
         .clk           (clk),
         .rst           (rst),
+        .flush         (flush),
         .if_pc         (if_pc),
         .if_insn       (if_insn),
         .rs1_addr      (rs1_addr),
@@ -113,6 +116,7 @@ module cpu_top(
         .id_jump       (id_jump),
         .id_load       (id_load),
         .id_store      (id_store),
+        .id_ls_type    (id_ls_type),
         .id_gpr_we_    (id_gpr_we_),
         .id_dst_addr   (id_dst_addr),
         .id_alu_src    (id_alu_src),
@@ -131,6 +135,7 @@ module cpu_top(
         .id_jump        (id_jump),
         .id_load        (id_load),
         .id_store       (id_store),
+        .id_ls_type     (id_ls_type),
         .id_gpr_we_     (id_gpr_we_),
         .id_dst_addr    (id_dst_addr),
         .id_alu_src     (id_alu_src),
@@ -145,6 +150,7 @@ module cpu_top(
         .ex_pc          (ex_pc),
         .ex_load        (ex_load),
         .ex_store       (ex_store),
+        .ex_ls_type     (ex_ls_type),
         .ex_gpr_we_     (ex_gpr_we_),
         .ex_dst_addr    (ex_dst_addr),
         .ex_alu_res     (ex_alu_res),
@@ -156,11 +162,11 @@ module cpu_top(
         .clk            (clk),
         .rst            (rst),
         .id_load        (id_load),
-        .alu_out        (ex_alu_res),
+        .alu_out        (alu_out),
         .ex_pc          (ex_pc),
         .ex_load        (ex_load),
         .ex_store       (ex_store),
-        .ex_mem_to_reg  (1'b0), // 需要根据实际情况连接
+        .ex_ls_type     (ex_ls_type),
         .ex_gpr_we_     (ex_gpr_we_),
         .ex_dst_addr    (ex_dst_addr),
         .ex_alu_res     (ex_alu_res),

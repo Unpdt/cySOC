@@ -13,8 +13,10 @@ module if_bus (
     output wire                 rw,
     input  wire [`WordDataBus]  rd_data
 );
-    
-    assign addr = PC;
+    wire [`WordAddrBus] v_addr;
+
+    assign v_addr = PC - `RESET_PC;
+    assign addr = v_addr[31:2];
     assign rw = `READ;
     assign insn = rd_data;
 

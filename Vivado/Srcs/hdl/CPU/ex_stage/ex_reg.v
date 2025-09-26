@@ -10,6 +10,7 @@ module ex_reg(
     input  wire                     id_jump,
     input  wire                     id_load,
     input  wire                     id_store,
+    input  wire [`LsTypeBus]        id_ls_type,
 
     input  wire                     id_gpr_we_,
     input  wire [`REG_IDX_W-1:0]    id_dst_addr,
@@ -29,6 +30,7 @@ module ex_reg(
     output reg  [`WordDataBus]      ex_pc,
     output reg                      ex_load,
     output reg                      ex_store,
+    output reg  [`LsTypeBus]        ex_ls_type,
     output reg                      ex_gpr_we_,
     output reg  [`REG_IDX_W-1:0]    ex_dst_addr,
     output reg  [`WordDataBus]      ex_alu_res,
@@ -40,6 +42,7 @@ module ex_reg(
             ex_pc <= `WORD_DATA_W'd0;
             ex_load <= `DISABLE;
             ex_store <= `DISABLE;
+            ex_ls_type <= `LS_TYPE_NONE;
             ex_gpr_we_ <= `DISABLE_;
             ex_dst_addr <= `REG_IDX_W'd0;
             ex_alu_res <= `ALU_SRC_IMM;
@@ -48,9 +51,10 @@ module ex_reg(
             ex_pc <= id_pc;
             ex_load <= id_load;
             ex_store <= id_store;
-            ex_gpr_we_ <= id_gpr_we_;
+            ex_ls_type <= id_ls_type;
+            ex_gpr_we_ <= id_gpr_we_ & (~id_load);
             ex_dst_addr <= id_dst_addr;
-            ex_alu_res <= alu_out;
+            ex_alu_res <= (id_jump == `ENABLE) ? id_pc + `PC_INCR : alu_out;
             ex_mem_wr_data <= id_rs2_data;
         end
     end

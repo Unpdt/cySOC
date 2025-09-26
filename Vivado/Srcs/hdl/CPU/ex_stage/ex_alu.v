@@ -6,8 +6,7 @@ module ex_alu (
     input  wire [`OpcodeBus]    alu_op,
     output wire [`WordDataBus]  alu_out,
 
-    input  wire [`WordDataBus]  id_pc,
-    output wire [`WordDataBus]  target_addr
+    input  wire [`WordDataBus]  id_pc
 );
 
     reg [`WordDataBus] alu_result;
@@ -38,8 +37,5 @@ module ex_alu (
     end
 
     assign alu_out = alu_result;
-
-    // 专用地址加法器
-    assign target_addr = id_pc + `PC_INCR + data2;
 
 endmodule

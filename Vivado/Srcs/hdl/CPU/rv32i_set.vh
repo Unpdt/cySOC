@@ -160,15 +160,34 @@
 // 常用常量
 `define ZERO_REG 5'b00000  // 零寄存器
 `define XLEN 32           // 寄存器位宽
-`define PC_INCR 1         // PC增量（字节地址）
+`define PC_INCR 4         // PC增量（字节地址）
 `define WORD_BYTES 4      // 字字节数
 `define HALFWORD_BYTES 2  // 半字字节数
 `define BYTE_BYTES 1      // 字节数
 
 // PC 初始化地址
-`define RESET_PC `WORD_DATA_W'd0
+`define RESET_PC `WORD_DATA_W'h8000018c
+
+`define INIT_DATA_ADDR `WORD_ADDR_W'h80002000
 
 `define ALU_SRC_IMM 0
 `define ALU_SRC_REG 1
+
+// load store 加载类型
+`define LsTypeBus 2:0
+`define LS_TYPE_BYTE  0
+`define LS_TYPE_HALF  1
+`define LS_TYPE_WORD  2
+`define LS_TYPE_UBYTE 3
+`define LS_TYPE_UHALF 4
+`define LS_TYPE_NONE  7
+`define LOAD_BYTE(data)  {{24{data[7]}}, data[7:0]}
+`define LOAD_HALF(data)  {{16{data[15]}}, data[15:0]}
+`define LOAD_WORD(data)  data
+`define LOAD_UBYTE(data) {{24{1'b0}}, data[7:0]}
+`define LOAD_UHALF(data) {{16{1'b0}}, data[15:0]}
+`define STORE_BYTE(data)  data[7:0]
+`define STORE_HALF(data)  data[15:0]
+`define STORE_WORD(data)  data
 
 `endif

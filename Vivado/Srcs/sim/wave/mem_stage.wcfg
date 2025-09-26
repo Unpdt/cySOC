@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="908.666 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,018.267 ns"></ZoomEndTime>
-      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+      <ZoomStartTime time="873.700 ns"></ZoomStartTime>
+      <ZoomEndTime time="945.001 ns"></ZoomEndTime>
+      <Cursor1Time time="905.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="336"></NameColumnWidth>
-      <ValueColumnWidth column_width="147"></ValueColumnWidth>
+      <NameColumnWidth column_width="179"></NameColumnWidth>
+      <ValueColumnWidth column_width="139"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="30" />
+   <WVObjectSize size="31" />
    <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -47,6 +47,10 @@
    <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ex_store" type="logic">
       <obj_property name="ElementShortName">ex_store</obj_property>
       <obj_property name="ObjectShortName">ex_store</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ex_ls_type" type="array">
+      <obj_property name="ElementShortName">ex_ls_type[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_ls_type[2:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ex_mem_to_reg" type="logic">
       <obj_property name="ElementShortName">ex_mem_to_reg</obj_property>

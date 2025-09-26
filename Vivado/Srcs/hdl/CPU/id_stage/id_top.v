@@ -8,6 +8,9 @@ module id_top (
     input  wire [`WordDataBus]      if_pc,
     input  wire [`WordDataBus]      if_insn,
 
+    // 控制信号
+    input  wire                     flush,
+
     // gpr 接口
     output wire [`REG_IDX_W-1:0]    rs1_addr,
     output wire [`REG_IDX_W-1:0]    rs2_addr,
@@ -33,6 +36,7 @@ module id_top (
     output wire                     id_jump,
     output wire                     id_load,
     output wire                     id_store,
+    output wire [`LsTypeBus]        id_ls_type,
 
     output wire                     id_gpr_we_,
     output wire [`REG_IDX_W-1:0]    id_dst_addr,
@@ -230,6 +234,9 @@ module id_top (
         .clk             (clk),
         .rst             (rst),
 
+        // 外部控制信号
+        .flush           (flush),
+
         // 直通输入
         .alu_out         (alu_out),
         .ex_dst_addr     (ex_dst_addr),
@@ -340,6 +347,7 @@ module id_top (
         .id_jump         (id_jump),
         .id_load         (id_load),
         .id_store        (id_store),
+        .id_ls_type      (id_ls_type),
         .id_gpr_we_      (id_gpr_we_),
         .id_dst_addr     (id_dst_addr),
         .id_alu_src      (id_alu_src),

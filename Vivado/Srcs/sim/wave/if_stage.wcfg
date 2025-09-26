@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="342.400 ns"></ZoomStartTime>
-      <ZoomEndTime time="418.201 ns"></ZoomEndTime>
-      <Cursor1Time time="365.700 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="10.120001 us"></ZoomEndTime>
+      <Cursor1Time time="0.145000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="131"></NameColumnWidth>
-      <ValueColumnWidth column_width="142"></ValueColumnWidth>
+      <ValueColumnWidth column_width="138"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="13" />
    <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_if_top/clk" type="logic">
@@ -67,7 +67,6 @@
    <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_if_top/if_pc" type="array">
       <obj_property name="ElementShortName">if_pc[31:0]</obj_property>
       <obj_property name="ObjectShortName">if_pc[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_if_top/if_insn" type="array">
       <obj_property name="ElementShortName">if_insn[31:0]</obj_property>

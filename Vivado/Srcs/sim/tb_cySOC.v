@@ -6,11 +6,11 @@
 
 module tb_cySOC;
 
-    // 时钟和复位信号
+    // 时钟和复位信�?
     reg                 clk;
     reg                 rst;
 
-    // 实例化 cySOC
+    // 实例�? cySOC
     cySOC inst_cySOC (
         .clk           (clk),
         .rst           (rst)
@@ -22,7 +22,7 @@ module tb_cySOC;
 
     // 测试序列
     initial begin
-        // 初始化信号
+        // 初始化信�?
         clk = 0;
         rst = `RESET_DISABLE;
 
@@ -30,8 +30,8 @@ module tb_cySOC;
         #20 rst = `RESET_ENABLE;
         #100 rst = `RESET_DISABLE;
 
-        // 运行一段时间
-        #1000;
+        // 运行�?段时�?
+        #10000;
 
         // 结束仿真
         $display("Simulation completed at time %0t", $time);

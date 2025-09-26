@@ -6,7 +6,7 @@ module mem_reg(
 
     // ex 阶段寄存器输入
     input  wire [`WordDataBus]      ex_pc,
-    input  wire                     ex_mem_to_reg,
+    input  wire                     ex_load,
     input  wire                     ex_gpr_we_,
     input  wire [`REG_IDX_W-1:0]    ex_dst_addr,
     input  wire [`WordDataBus]      ex_alu_res,
@@ -33,7 +33,7 @@ module mem_reg(
         end else begin
             mem_pc <= ex_pc;
             mem_mem_out <= mem_out;
-            mem_to_reg <= ex_mem_to_reg;
+            mem_to_reg <= ex_load;
             mem_gpr_we_ <= ex_gpr_we_;
             mem_dst_addr <= ex_dst_addr;
             mem_alu_res <= ex_alu_res;

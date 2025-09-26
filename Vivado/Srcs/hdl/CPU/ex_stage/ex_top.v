@@ -10,6 +10,7 @@ module ex_top(
     input  wire                     id_jump,
     input  wire                     id_load,
     input  wire                     id_store,
+    input  wire [`LsTypeBus]        id_ls_type,
 
     input  wire                     id_gpr_we_,
     input  wire [`REG_IDX_W-1:0]    id_dst_addr,
@@ -35,6 +36,7 @@ module ex_top(
     output wire [`WordDataBus]      ex_pc,
     output wire                     ex_load,
     output wire                     ex_store,
+    output wire [`LsTypeBus]        ex_ls_type,
     output wire                     ex_gpr_we_,
     output wire [`REG_IDX_W-1:0]    ex_dst_addr,
     output wire [`WordDataBus]      ex_alu_res,
@@ -51,7 +53,20 @@ module ex_top(
     assign data1 = id_rs1_data;
     assign data2 = (id_alu_src == `ALU_SRC_IMM) ? id_imm_ext : id_rs2_data;
 
-    assign flush = id_jump || branch_valid;
+    
+
+    // flush 特殊处理，持续两个周期
+    reg  flush_r;
+    wire flush_w;
+    assign flush_w = id_jump || branch_valid;
+    always @(posedge clk or `RESET_EDGE rst) begin
+        if (rst == `RESET_ENABLE) begin
+            flush_r <= `DISABLE;
+        end else begin
+            flush_r <= flush_w;
+        end
+    end
+    assign flush = flush_r || flush_w; 
 
     assign new_pc = target_addr;
 
@@ -63,14 +78,16 @@ module ex_top(
         end
     end
 
+    // 专用地址加法器
+    assign target_addr = id_pc + id_imm_ext;
+
     // ex_alu 模块例化
     ex_alu inst_ex_alu (
         .data1      (data1),
         .data2      (data2),
         .alu_op     (id_alu_op),
         .alu_out    (alu_out),
-        .id_pc      (id_pc),
-        .target_addr(target_addr)
+        .id_pc      (id_pc)
     );
 
     // ex_reg 模块例化
@@ -84,6 +101,7 @@ module ex_top(
         .id_jump        (id_jump),
         .id_load        (id_load),
         .id_store       (id_store),
+        .id_ls_type     (id_ls_type),
         .id_gpr_we_     (id_gpr_we_),
         .id_dst_addr    (id_dst_addr),
         .id_alu_op      (id_alu_op),
@@ -101,6 +119,7 @@ module ex_top(
         .ex_pc          (ex_pc),
         .ex_load        (ex_load),
         .ex_store       (ex_store),
+        .ex_ls_type     (ex_ls_type),
         .ex_gpr_we_     (ex_gpr_we_),
         .ex_dst_addr    (ex_dst_addr),
         .ex_alu_res     (ex_alu_res),

@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="315.700 ns"></ZoomStartTime>
-      <ZoomEndTime time="371.501 ns"></ZoomEndTime>
-      <Cursor1Time time="335.000 ns"></Cursor1Time>
+      <ZoomStartTime time="1,409.840 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,482.941 ns"></ZoomEndTime>
+      <Cursor1Time time="1,439.440 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="336"></NameColumnWidth>
-      <ValueColumnWidth column_width="137"></ValueColumnWidth>
+      <NameColumnWidth column_width="167"></NameColumnWidth>
+      <ValueColumnWidth column_width="133"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="27" />
    <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_ex_top/clk" type="logic">
@@ -31,7 +31,6 @@
    <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_ex_top/id_pc" type="array">
       <obj_property name="ElementShortName">id_pc[31:0]</obj_property>
       <obj_property name="ObjectShortName">id_pc[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_ex_top/id_branch" type="logic">
       <obj_property name="ElementShortName">id_branch</obj_property>
