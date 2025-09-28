@@ -8,12 +8,12 @@ module mem_bus (
     input  wire [`WordAddrBus]  addr,
     input  wire [`WordDataBus]  wr_data,
     output wire [`WordDataBus]  rd_data,
-    input  wire                 rw,
+    input  wire [3:0]           rw,
     input  wire                 en,
 
     // 数据总线接口
     output wire [`WordAddrBus]  bus_addr,
-    output wire                 bus_rw,
+    output wire [3:0]           bus_rw,
     output wire                 bus_en,
     input  wire [`WordDataBus]  bus_rd_data,
     output wire [`WordDataBus]  bus_wr_data

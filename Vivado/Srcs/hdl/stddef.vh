@@ -9,6 +9,8 @@
 `define ENABLE_ 1'b0
 `define READ 1'b1
 `define WRITE 1'b0
+`define DATA_READ 4'b1111
+`define DATA_WRITE 4'b0000
 `define LSB 0
 
 `define BYTE_DATA_W 8

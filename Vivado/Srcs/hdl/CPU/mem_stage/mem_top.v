@@ -19,7 +19,7 @@ module mem_top(
 
     // 数据总线接口
     output wire [`WordAddrBus]      bus_addr,
-    output wire                     bus_rw,
+    output wire [3:0]               bus_rw,
     output wire                     bus_en,
     input  wire [`WordDataBus]      bus_rd_data,
     output wire [`WordDataBus]      bus_wr_data,
@@ -38,7 +38,7 @@ module mem_top(
     // 内部连线信号
     wire [`WordAddrBus]      ctrl_addr;
     wire [`WordDataBus]      ctrl_wr_data;
-    wire                     ctrl_rw;
+    wire [3:0]               ctrl_rw;
     wire                     ctrl_en;
     wire [`WordDataBus]      ctrl_rd_data;
     wire [`WordDataBus]      ctrl_mem_out;

@@ -11,7 +11,7 @@ module cySOC(
     wire [`WordDataBus]  insn_rd_data;
     
     wire [`WordAddrBus]  data_addr;
-    wire                 data_rw;
+    wire [3:0]           data_rw;
     wire                 data_en;
     wire [`WordDataBus]  data_rd_data;
     wire [`WordDataBus]  data_wr_data;

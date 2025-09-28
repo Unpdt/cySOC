@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="873.700 ns"></ZoomStartTime>
-      <ZoomEndTime time="945.001 ns"></ZoomEndTime>
-      <Cursor1Time time="905.000 ns"></Cursor1Time>
+      <ZoomStartTime time="213.050 ns"></ZoomStartTime>
+      <ZoomEndTime time="284.751 ns"></ZoomEndTime>
+      <Cursor1Time time="235.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="179"></NameColumnWidth>
-      <ValueColumnWidth column_width="139"></ValueColumnWidth>
+      <ValueColumnWidth column_width="135"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="31" />
+   <WVObjectSize size="32" />
    <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -51,10 +51,6 @@
    <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ex_ls_type" type="array">
       <obj_property name="ElementShortName">ex_ls_type[2:0]</obj_property>
       <obj_property name="ObjectShortName">ex_ls_type[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ex_mem_to_reg" type="logic">
-      <obj_property name="ElementShortName">ex_mem_to_reg</obj_property>
-      <obj_property name="ObjectShortName">ex_mem_to_reg</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ex_gpr_we_" type="logic">
       <obj_property name="ElementShortName">ex_gpr_we_</obj_property>
@@ -143,5 +139,13 @@
    <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/ctrl_mem_out" type="array">
       <obj_property name="ElementShortName">ctrl_mem_out[31:0]</obj_property>
       <obj_property name="ObjectShortName">ctrl_mem_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/test_wr_data" type="array">
+      <obj_property name="ElementShortName">test_wr_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">test_wr_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cySOC/inst_cySOC/inst_cpu_top/inst_mem_top/flag" type="logic">
+      <obj_property name="ElementShortName">flag</obj_property>
+      <obj_property name="ObjectShortName">flag</obj_property>
    </wvobject>
 </wave_config>

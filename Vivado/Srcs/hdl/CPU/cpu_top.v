@@ -11,7 +11,7 @@ module cpu_top(
 
     // 数据总线接口
     output wire [`WordAddrBus]  data_addr,
-    output wire                 data_rw,
+    output wire [3:0]           data_rw,
     output wire                 data_en,
     input  wire [`WordDataBus]  data_rd_data,
     output wire [`WordDataBus]  data_wr_data

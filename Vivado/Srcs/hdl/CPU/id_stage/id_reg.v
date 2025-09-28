@@ -130,8 +130,6 @@ module id_reg(
     output reg  [`WordDataBus]      id_imm_ext,
     output reg  [`WordDataBus]      id_rs1_data,
     output reg  [`WordDataBus]      id_rs2_data
-
-    // output reg                      stall
 );
 
     wire is_gpr_we;
@@ -150,6 +148,8 @@ module id_reg(
         stall = `DISABLE;
         if ((rs1 == id_dst_addr || rs2 == id_dst_addr) && 
             id_gpr_we_ == `ENABLE_ && id_load == `ENABLE) begin
+            stall = `ENABLE;
+        end else if (is_load && id_store == `ENABLE) begin
             stall = `ENABLE;
         end
     end
@@ -221,6 +221,8 @@ module id_reg(
     always @(posedge clk or `RESET_EDGE rst) begin
         if (rst == `RESET_ENABLE || stall == `ENABLE) begin 
             id_ls_type <= `LS_TYPE_NONE;
+        end else if (flush == `ENABLE) begin 
+            id_ls_type <= `LS_TYPE_NONE;
         end else if (is_lb || is_sb) begin
             id_ls_type <= `LS_TYPE_BYTE;
         end else if (is_lh || is_sh) begin
@@ -239,6 +241,9 @@ module id_reg(
     // id_gpr_we_ && id_dst_addr
     always @(posedge clk or `RESET_EDGE rst) begin
         if (rst == `RESET_ENABLE || stall == `ENABLE) begin 
+            id_gpr_we_ <= `DISABLE_;
+            id_dst_addr <= `REG_IDX_W'd0;
+        end else if (flush == `ENABLE) begin 
             id_gpr_we_ <= `DISABLE_;
             id_dst_addr <= `REG_IDX_W'd0;
         end else if (is_gpr_we) begin 
