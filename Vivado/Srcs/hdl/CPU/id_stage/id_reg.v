@@ -1,3 +1,8 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// ID stage
+// fence 和 fencei 暂用NOP代替
+// ---------------------------------------------------------------------------------------------------------------------   
+
 `include "../rv32i.vh"
 
 module id_reg(
@@ -118,6 +123,7 @@ module id_reg(
     output reg  [`WordDataBus]      id_pc,
     output reg                      id_branch,
     output reg                      id_jump,
+    output reg                      id_is_jalr,
     output reg                      id_load,
     output reg                      id_store,
     output reg  [`LsTypeBus]        id_ls_type,
@@ -182,12 +188,16 @@ module id_reg(
     always @(posedge clk or `RESET_EDGE rst) begin
         if (rst == `RESET_ENABLE || stall == `ENABLE) begin 
             id_jump <= `DISABLE;
+            id_is_jalr <= `DISABLE;
         end else if (flush == `ENABLE) begin 
             id_jump <= `DISABLE;
+            id_is_jalr <= `DISABLE;
         end else if (is_jump) begin 
             id_jump <= `ENABLE;
+            id_is_jalr <= is_jalr;
         end else begin 
             id_jump <= `DISABLE;
+            id_is_jalr <= `DISABLE;
         end
     end
 
@@ -248,7 +258,11 @@ module id_reg(
             id_dst_addr <= `REG_IDX_W'd0;
         end else if (is_gpr_we) begin 
             id_gpr_we_ <= `ENABLE_;
-            id_dst_addr <= rd;
+            if (is_fence || is_fencei) begin
+                id_dst_addr <= `REG_ZERO;
+            end else begin
+                id_dst_addr <= rd;
+            end
         end else begin 
             id_gpr_we_ <= `DISABLE_;
             id_dst_addr <= `REG_IDX_W'd0;
@@ -274,7 +288,7 @@ module id_reg(
             id_alu_op <= `ALU_NOP;
         end else if (flush == `ENABLE) begin 
             id_alu_op <= `ALU_NOP;
-        end else if (is_add || is_addi || is_auipc || is_load || is_store) begin 
+        end else if (is_add || is_addi || is_auipc || is_load || is_store || is_fence || is_fencei) begin 
             id_alu_op <= `ALU_ADD;
         end else if (is_sub) begin 
             id_alu_op <= `ALU_SUB;
@@ -319,7 +333,9 @@ module id_reg(
             id_imm_ext <= `WORD_DATA_W'd0;
         end else if (flush == `ENABLE) begin 
             id_imm_ext <= `WORD_DATA_W'd0;
-        end else if (is_i_type || is_i_load) begin
+        end if (is_fence || is_fencei) begin
+            id_imm_ext <= `WORD_DATA_W'd0;
+        end else if (is_i_type || is_i_load || is_j_jalr) begin
             id_imm_ext <= imm_i;  
         end else if (is_s_type) begin
             id_imm_ext <= imm_s;  
@@ -327,7 +343,7 @@ module id_reg(
             id_imm_ext <= imm_b;  
         end else if (is_u_type || is_u_auipc) begin
             id_imm_ext <= imm_u;  
-        end else if (is_j_type || is_j_jalr) begin
+        end else if (is_j_type) begin
             id_imm_ext <= imm_j;  
         end else begin
             id_imm_ext <= `WORD_DATA_W'd0;
@@ -340,6 +356,9 @@ module id_reg(
             id_rs1_data <= `WORD_DATA_W'd0;
             id_rs2_data <= `WORD_DATA_W'd0;
         end else if (flush == `ENABLE) begin 
+            id_rs1_data <= `WORD_DATA_W'd0;
+            id_rs2_data <= `WORD_DATA_W'd0;
+        end else if (is_fence || is_fencei) begin
             id_rs1_data <= `WORD_DATA_W'd0;
             id_rs2_data <= `WORD_DATA_W'd0;
         end else begin

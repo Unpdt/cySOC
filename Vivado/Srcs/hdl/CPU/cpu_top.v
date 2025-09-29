@@ -26,6 +26,7 @@ module cpu_top(
     wire [`WordDataBus]  id_pc;
     wire                id_branch;
     wire                id_jump;
+    wire                id_is_jalr;
     wire                id_load;
     wire                id_store;
     wire [`LsTypeBus]   id_ls_type;
@@ -117,6 +118,7 @@ module cpu_top(
         .id_pc         (id_pc),
         .id_branch     (id_branch),
         .id_jump       (id_jump),
+        .id_is_jalr    (id_is_jalr),
         .id_load       (id_load),
         .id_store      (id_store),
         .id_ls_type    (id_ls_type),
@@ -136,6 +138,7 @@ module cpu_top(
         .id_pc          (id_pc),
         .id_branch      (id_branch),
         .id_jump        (id_jump),
+        .id_is_jalr     (id_is_jalr),
         .id_load        (id_load),
         .id_store       (id_store),
         .id_ls_type     (id_ls_type),

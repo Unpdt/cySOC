@@ -8,6 +8,7 @@ module ex_top(
     input  wire [`WordDataBus]      id_pc,
     input  wire                     id_branch,
     input  wire                     id_jump,
+    input  wire                     id_is_jalr,
     input  wire                     id_load,
     input  wire                     id_store,
     input  wire [`LsTypeBus]        id_ls_type,
@@ -79,7 +80,7 @@ module ex_top(
     end
 
     // 专用地址加法器
-    assign target_addr = id_pc + id_imm_ext;
+    assign target_addr = (id_is_jalr == `ENABLE)  ? id_rs1_data + id_imm_ext : id_pc + id_imm_ext;
 
     // ex_alu 模块例化
     ex_alu inst_ex_alu (
