@@ -333,7 +333,7 @@ module id_reg(
             id_imm_ext <= `WORD_DATA_W'd0;
         end else if (flush == `ENABLE) begin 
             id_imm_ext <= `WORD_DATA_W'd0;
-        end if (is_fence || is_fencei) begin
+        end else if (is_fence || is_fencei) begin
             id_imm_ext <= `WORD_DATA_W'd0;
         end else if (is_i_type || is_i_load || is_j_jalr) begin
             id_imm_ext <= imm_i;  
